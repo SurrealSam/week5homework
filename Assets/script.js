@@ -78,18 +78,34 @@ button5.addEventListener("click", function () {
 });
 
 //loads saved local storage items to input fields
-$(document).ready(function(){
-    
-    form9.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info9'))) + " \"\ ";
-    form10.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info10'))) + " \"\ ";
-    form11.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info11'))) + " \"\ ";
-    form12.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info12'))) + " \"\ ";
-    form1.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info1'))) + " \"\ ";
-    form2.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info2'))) + " \"\ ";
-    form3.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info3'))) + " \"\ ";
-    form4.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info4'))) + " \"\ ";
-    form5.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info5'))) + " \"\ ";
+$(document).ready(function () {
 
-    
-    });
-  
+    if (JSON.parse(window.localStorage.getItem('info9')) !== null) {
+        form9.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info9'))) + " \"\ ";
+    };
+    if (JSON.parse(window.localStorage.getItem('info10')) !== null) {
+        form10.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info10'))) + " \"\ ";
+    };
+    if (JSON.parse(window.localStorage.getItem('info11')) !== null) {
+        form11.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info11'))) + " \"\ ";
+    };
+    if (JSON.parse(window.localStorage.getItem('info12')) !== null) {
+        form12.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info12'))) + " \"\ ";
+    };
+    if (JSON.parse(window.localStorage.getItem('info1')) !== null) {
+        form1.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info1'))) + " \"\ ";
+    };
+    if (JSON.parse(window.localStorage.getItem('info2')) !== null) {
+        form2.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info2'))) + " \"\ ";
+    };
+    if (JSON.parse(window.localStorage.getItem('info3')) !== null) {
+        form3.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info3'))) + " \"\ ";
+    };
+    if (JSON.parse(window.localStorage.getItem('info4')) !== null) {
+        form4.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info4'))) + " \"\ ";
+    };
+    if (JSON.parse(window.localStorage.getItem('info5')) !== null) {
+        form5.setAttribute('placeholder', "" + JSON.parse(window.localStorage.getItem('info5'))) + " \"\ ";
+    };
+
+});
