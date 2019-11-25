@@ -109,3 +109,11 @@ $(document).ready(function () {
     };
 
 });
+
+//clock stuff
+//momentjs hour (like bootstrap/jquery)
+var currentHour = moment().hour(Number);
+
+console.log(currentHour);
+//loop over time blocks
+document.getElementById("clock").innerHTML=currentHour;
