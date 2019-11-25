@@ -114,10 +114,39 @@ $(document).ready(function () {
 //momentjs hour (like bootstrap/jquery)
 
 
-
 //loop over time blocks
 setInterval(function () {
-    var currentHour = moment().format('MMMM Do YYYY, h:mm a');
-    document.getElementById("clock").innerHTML = currentHour;
+    var currentTime = moment().format('MMMM Do YYYY, h:mm a');
+    document.getElementById("clock").innerHTML = currentTime;
 },
     1000);
+
+var currentHour = moment().format("k");
+console.log(currentHour);
+
+var tr9 = document.getElementById("tr-9");
+var tr10 = document.getElementById("tr-10");
+var tr11 = document.getElementById("tr-11");
+var tr12 = document.getElementById("tr-12");
+var tr1 = document.getElementById("tr-13");
+var tr2 = document.getElementById("tr-14");
+var tr3 = document.getElementById("tr-15");
+var tr4 = document.getElementById("tr-16");
+var tr5 = document.getElementById("tr-17");
+
+$(".time-block").each(function () {
+    var blockHour = parseInt($(this).attr("id").split("-")[1]);
+    console.log(blockHour);
+    //check if we've moved past this time
+    if (blockHour < currentHour) {
+        $(this).setAttribute("class", "table-secondary");
+    }
+
+    else if (blockHour === currentHour) {
+        $(this).setAttribute("class", "table-danger");
+
+    }
+    else {
+    }
+});
+
