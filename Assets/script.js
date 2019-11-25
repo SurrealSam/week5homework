@@ -112,11 +112,12 @@ $(document).ready(function () {
 
 //clock stuff
 //momentjs hour (like bootstrap/jquery)
-var currentHour = moment().format('MMMM Do YYYY, h:mm:ss a');
 
-console.log(currentHour);
+
+
 //loop over time blocks
 setInterval(function () {
-document.getElementById("clock").innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a');
+    var currentHour = moment().format('MMMM Do YYYY, h:mm a');
+    document.getElementById("clock").innerHTML = currentHour;
 },
     1000);
