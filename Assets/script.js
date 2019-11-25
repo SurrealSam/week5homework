@@ -111,10 +111,6 @@ $(document).ready(function () {
 });
 
 //clock stuff
-//momentjs hour (like bootstrap/jquery)
-
-
-//loop over time blocks
 setInterval(function () {
     var currentTime = moment().format('MMMM Do YYYY, h:mm a');
     document.getElementById("clock").innerHTML = currentTime;
@@ -139,11 +135,11 @@ $(".time-block").each(function () {
     console.log(blockHour);
     //check if we've moved past this time
     if (blockHour < currentHour) {
-        $(this).setAttribute("class", "table-secondary");
+        $(this).attr("class", "table-secondary");
     }
 
     else if (blockHour === currentHour) {
-        $(this).setAttribute("class", "table-danger");
+        $(this).attr("class", "table-danger");
 
     }
     else {
