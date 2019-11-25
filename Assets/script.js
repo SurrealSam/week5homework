@@ -19,16 +19,6 @@ var button3 = document.getElementById("button3");
 var button4 = document.getElementById("button4");
 var button5 = document.getElementById("button5");
 
-var info9 = form9.value;
-var info10 = form10.value;
-var inf11 = form11.value;
-var info12 = form12.value;
-var info1 = form1.value;
-var info2 = form2.value;
-var info3 = form3.value;
-var info4 = form4.value;
-var info5 = form5.value;
-
 //event listeners for buttons to set local storage based on input fields
 button9.addEventListener("click", function () {
     event.preventDefault();
@@ -118,30 +108,23 @@ setInterval(function () {
     1000);
 
 var currentHour = moment().format("k");
-console.log(currentHour);
 
-var tr9 = document.getElementById("tr-9");
-var tr10 = document.getElementById("tr-10");
-var tr11 = document.getElementById("tr-11");
-var tr12 = document.getElementById("tr-12");
-var tr1 = document.getElementById("tr-13");
-var tr2 = document.getElementById("tr-14");
-var tr3 = document.getElementById("tr-15");
-var tr4 = document.getElementById("tr-16");
-var tr5 = document.getElementById("tr-17");
-
+//changes row color by checking their ids against the current time, this is done by editing their bootstrap classes
 $(".time-block").each(function () {
     var blockHour = parseInt($(this).attr("id").split("-")[1]);
-    console.log(blockHour);
+    
     //check if we've moved past this time
     if (blockHour < currentHour) {
         $(this).attr("class", "table-secondary");
     }
 
+    //if it is the current time
     else if (blockHour === currentHour) {
         $(this).attr("class", "table-danger");
 
     }
+
+    //if it is a future block, leave it alone
     else {
     }
 });
