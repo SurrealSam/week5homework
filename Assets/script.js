@@ -119,7 +119,7 @@ $(".time-block").each(function () {
     }
 
     //if it is the current time
-    else if (blockHour === currentHour) {
+    else if (parseInt(blockHour) ===parseInt(currentHour)) {
         $(this).attr("class", "table-danger");
 
     }
